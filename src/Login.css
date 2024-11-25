@@ -1,0 +1,90 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Arial", sans-serif;
+	background: linear-gradient(to bottom right, #4a90e2, #9013fe);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.box {
+	background-color: #ffffff;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	width: 90%;
+	max-width: 400px;
+	text-align: center;
+	animation: fadeIn 0.5s ease-in-out;
+}
+
+.box input {
+	width: 100%;
+	padding: 30px 60px;
+	margin: 10px 0;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	font-size: 16px;
+	box-sizing: border-box;
+	outline: none;
+}
+
+.box input:focus {
+	border-color: #4a90e2;
+	box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+
+.box button {
+	background-color: #4a90e2;
+	color: #ffffff;
+	border: none;
+	border-radius: 8px;
+	padding: 12px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+	width: 100%;
+}
+
+.box button:hover {
+	background-color: #357abd;
+}
+
+.box button:active {
+	transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+	.box {
+		width: 80%;
+		padding: 20px;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.email:focus,
+input[type="password"]:focus {
+	border-color: #4a90e2;
+	box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+	outline: none;
+}
+
+.error {
+	color: red;
+	font-size: 0.9rem;
+	margin-bottom: 10px;
+}
